@@ -1,0 +1,12 @@
+<div class="game-space">
+  <div class="game-space__wrapper" *ngIf="!(loading$ | async); else loadingBar">
+    <ng-container *ngIf="jackpots$ | async as jackpots">
+        <app-game-card *ngFor="let game of games$ | async" [game]="game" [jackpot]="jackpots[game.id]">
+        </app-game-card>
+    </ng-container>
+  </div>
+
+  <ng-template #loadingBar>
+    <app-loading-bar></app-loading-bar>
+  </ng-template>
+</div>

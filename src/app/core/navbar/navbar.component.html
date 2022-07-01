@@ -1,0 +1,5 @@
+<div class="navbar">
+  <div class="navbar__wrapper">
+    <a class="navbar__item" *ngFor="let item of navbarItems" [routerLink]="[ item.path ]" [routerLinkActive]="'active'">{{item.label}}</a>
+  </div>
+</div>

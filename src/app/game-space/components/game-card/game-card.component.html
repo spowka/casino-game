@@ -1,0 +1,9 @@
+<div class="game-card">
+  <div class="game-card__wrapper"
+    [ngClass]="{'top-ribbon': isTop, 'new-ribbon': isNew}">
+    <div class="game-card__jackpot" *ngIf="jackpot">
+      {{ jackpot | currency:'GBP':'symbol':'3.2-2' }}
+    </div>
+    <img class="game-card__image" [src]="game?.image" alt="Game Image">
+  </div>
+</div>

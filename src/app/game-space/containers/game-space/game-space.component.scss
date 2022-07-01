@@ -1,0 +1,15 @@
+.game-space {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+
+  &__wrapper {
+    max-width: 80%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 10px;
+    row-gap: 40px;
+  }
+}
